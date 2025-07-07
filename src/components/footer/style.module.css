@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+}
+
+main {
+  flex: 1; /* Faz o main crescer e empurra o footer para baixo */
+  padding: 20px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
