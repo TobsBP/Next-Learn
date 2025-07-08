@@ -1,5 +1,6 @@
-import "./globals.css";
 import { Footer } from "../components/footer";
+import { Nav } from "../components/nav";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -8,14 +9,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
+      <body className={"flex flex-col min-h-screen"}>
+
+        <Nav />
+        
+        {children}
 
         <Footer />
-
-        {children}
       </body>
+      
     </html>
   );
 }
