@@ -1,6 +1,7 @@
 import { Button } from "@/components/button";
+import Link from "next/link";
 
-interface Props {
+export interface Props {
     id: number;
     title: string;
     body: string;
@@ -65,6 +66,9 @@ export default async function Posts() {
                         <h2 className="text-xl font-semibold">{post.title}</h2>
                         <p className="text-gray-700">{post.body}</p>
                         <p className="text-sm text-gray-500">User ID: {post.userId}</p>
+                        <Link href={`/posts/${post.id}`} className="text-blue-500 hover:underline">
+                            Show details
+                        </Link>
                     </li>
                 ))}
             </ul>
