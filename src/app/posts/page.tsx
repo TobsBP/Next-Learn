@@ -1,3 +1,5 @@
+import { Button } from "@/components/button";
+
 interface Props {
     id: number;
     title: string;
@@ -14,8 +16,10 @@ export default async function Posts() {
     const response = await fetch("https://dummyjson.com/posts")
     const data: Response = await response.json();
 
+    
     return(
         <div className="mr-2 ml-2">
+            <Button />
             <h1 className="text-center mt-5 mb-2 font-bold text-3xl">Posts</h1>
             <ul className="space-y-4">
                 {data.posts.map((post) => (
