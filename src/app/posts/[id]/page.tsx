@@ -5,6 +5,7 @@ export default async function DetailPost({params}: {params: Promise<{id: string}
     
     const { id } = await params;
 
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate a delay
     const response = await fetch(`https://dummyjson.com/posts/${id}`)
     const data: Props = await response.json();
     
