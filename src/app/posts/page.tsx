@@ -12,6 +12,8 @@ interface Response {
     posts: Props[];
 }
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 // Server components
 export default async function Posts() {
     const response = await fetch("https://dummyjson.com/posts")
